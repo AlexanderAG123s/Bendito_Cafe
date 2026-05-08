@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Reserve | Velvet Roast</title>
+    <meta name="description" content="Get in touch with us or reserve a table at Velvet Roast.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu"><i class="ph ph-list"></i></button>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="menu.html" class="nav-link">Our Menu</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="btn btn-outline btn-sm active">Reserve</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sub Hero Section -->
+        <section class="sub-hero" style="background-image: url('https://images.unsplash.com/photo-1495474472201-4bd598b4491b?auto=format&fit=crop&q=80&w=2000');">
+            <div class="sub-hero-overlay"></div>
+            <div class="sub-hero-content reveal-up">
+                <h1 class="sub-hero-title">Get in Touch</h1>
+                <p class="hero-text">We'd love to hear from you and host your next visit.</p>
+            </div>
+        </section>
+
+        <!-- Contact & Reservation -->
+        <section class="contact section-padding pt-0" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info reveal-left">
+                    <span class="section-tag">Visit Us</span>
+                    <h2 class="section-title">Reserve your table</h2>
+                    <p class="section-desc">Ensure you have the perfect spot for your meeting or date. Walk-ins are always welcome!</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="ph ph-map-pin"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Artisan Avenue, Metro City</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="ph ph-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon - Fri: 7:00 AM - 8:00 PM<br>Sat - Sun: 8:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="ph ph-phone"></i>
+                            <div>
+                                <h4>Contact</h4>
+                                <p>+1 (555) 123-4567<br>hello@velvetroast.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Realistic Map Placeholder (using a stylized iframe to Google Maps, or an image) -->
+                    <div class="map-container reveal-up" style="margin-top: 2rem;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s" 
+                            style="border:0; width: 100%; height: 250px; border-radius: var(--radius-md); filter: grayscale(80%) contrast(1.2) sepia(20%);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="reservation-form-wrapper reveal-right">
+                    <form class="reservation-form" id="reservationForm">
+                        <h3>Book a Table</h3>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="(555) 000-0000">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <select id="guests" required>
+                                <option value="1">1 Person</option>
+                                <option value="2" selected>2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5+">5+ People</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Special Requests (Optional)</label>
+                            <input type="text" id="notes" placeholder="Window seat, anniversary, etc.">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" style="margin-top: 1rem;">Confirm Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-padding" style="background: var(--color-cream);">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag">Questions?</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-grid mt-4">
+                    <div class="faq-item reveal-up">
+                        <h4>Do you offer dairy-free milk alternatives?</h4>
+                        <p>Yes, we offer Oat, Almond, and Soy milk for all our espresso and tea-based drinks.</p>
+                    </div>
+                    <div class="faq-item reveal-up" style="transition-delay: 0.1s">
+                        <h4>Are pets allowed inside?</h4>
+                        <p>We welcome well-behaved, leashed dogs on our outdoor patio area, but only service animals are permitted inside the cafe.</p>
+                    </div>
+                    <div class="faq-item reveal-up" style="transition-delay: 0.2s">
+                        <h4>Do you have reliable WiFi for working?</h4>
+                        <p>Absolutely. We provide complimentary high-speed fiber internet for all our paying customers. Outlets are available near most seating areas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+                <p>Curating exceptional coffee experiences in a warm, modern environment.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Visit Us</h4>
+                <ul>
+                    <li><a href="contact.html">Contact & Reserve</a></li>
+                    <li>123 Artisan Avenue, Metro City</li>
+                    <li>Mon - Fri: 7:00 AM - 8:00 PM</li>
+                    <li>Sat - Sun: 8:00 AM - 9:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="ph ph-paper-plane-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Velvet Roast. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

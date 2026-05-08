@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Velvet Roast</title>
+    <meta name="description" content="Learn about our story, our roasting process, and the team behind Velvet Roast.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu"><i class="ph ph-list"></i></button>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="menu.html" class="nav-link">Our Menu</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Reserve</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sub Hero Section -->
+        <section class="sub-hero" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=2000');">
+            <div class="sub-hero-overlay"></div>
+            <div class="sub-hero-content reveal-up">
+                <h1 class="sub-hero-title">Our Story</h1>
+                <p class="hero-text">Crafting moments, one cup at a time.</p>
+            </div>
+        </section>
+
+        <!-- Detailed Story -->
+        <section class="section-padding pt-0">
+            <div class="container about-grid">
+                <div class="about-content reveal-left">
+                    <span class="section-tag">Origins</span>
+                    <h2 class="section-title">Rooted in Tradition,<br>Brewed for Today.</h2>
+                    <p class="section-desc">Founded in 2016, Velvet Roast began as a humble cart in the artisan district. Our founder, driven by a deep fascination with the science and art of coffee extraction, wanted to bring specialty coffee to the neighborhood without the pretentiousness that often comes with it.</p>
+                    <p class="section-desc">Today, we operate in our flagship location, serving hundreds of guests daily. But our core philosophy remains unchanged: to serve the highest quality coffee in a space where everyone feels welcome.</p>
+                    <div class="mt-4">
+                        <ul class="about-features" style="margin-top:0;">
+                            <li><i class="ph-fill ph-check-circle"></i> Direct Trade Beans</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Eco-friendly Packaging</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Community Driven</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-images reveal-right">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=800" alt="Coffee Pouring" class="img-main">
+                </div>
+            </div>
+        </section>
+
+        <!-- The Process -->
+        <section class="section-padding" style="background-color: var(--color-dark-brown); color: var(--color-warm-white);">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag" style="color: var(--color-caramel);">The Craft</span>
+                    <h2 class="section-title" style="color: var(--color-warm-white);">Our Roasting Process</h2>
+                    <p class="section-desc mx-auto" style="color: var(--color-cream); margin: 0 auto;">We control every step of the journey, from the green bean to your cup.</p>
+                </div>
+                <div class="features-grid mt-4">
+                    <div class="feature-card reveal-up" style="background: rgba(255,255,255,0.05); color: var(--color-warm-white);">
+                        <div class="feature-icon" style="background: transparent; border: 1px solid var(--color-caramel);"><i class="ph ph-globe-hemisphere-west"></i></div>
+                        <h3>1. Sourcing</h3>
+                        <p style="color: var(--color-cream);">We partner directly with farmers in Colombia, Ethiopia, and Guatemala, ensuring fair wages and sustainable practices.</p>
+                    </div>
+                    <div class="feature-card reveal-up" style="background: rgba(255,255,255,0.05); color: var(--color-warm-white); transition-delay: 0.1s">
+                        <div class="feature-icon" style="background: transparent; border: 1px solid var(--color-caramel);"><i class="ph ph-fire"></i></div>
+                        <h3>2. Roasting</h3>
+                        <p style="color: var(--color-cream);">Our vintage Probat roaster is fired up daily. We roast in small batches to highlight the unique terroir of each bean.</p>
+                    </div>
+                    <div class="feature-card reveal-up" style="background: rgba(255,255,255,0.05); color: var(--color-warm-white); transition-delay: 0.2s">
+                        <div class="feature-icon" style="background: transparent; border: 1px solid var(--color-caramel);"><i class="ph ph-coffee"></i></div>
+                        <h3>3. Brewing</h3>
+                        <p style="color: var(--color-cream);">Precision is key. Our baristas weigh, grind, and extract every shot with meticulous attention to detail.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet The Team -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag">Our Family</span>
+                    <h2 class="section-title">Meet The Baristas</h2>
+                </div>
+                <div class="team-grid mt-4">
+                    <div class="team-card reveal-up">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="David" class="team-img">
+                        <h3>David Chen</h3>
+                        <p>Head Roaster</p>
+                    </div>
+                    <div class="team-card reveal-up" style="transition-delay: 0.1s">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" alt="Elena" class="team-img">
+                        <h3>Elena Rodriguez</h3>
+                        <p>Lead Barista</p>
+                    </div>
+                    <div class="team-card reveal-up" style="transition-delay: 0.2s">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=400" alt="Marcus" class="team-img">
+                        <h3>Marcus Johnson</h3>
+                        <p>Pastry Chef</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Script Tag -->
+    <script>
+        fetch('footer.html').then(response => response.text()).then(data => document.body.insertAdjacentHTML('beforeend', data));
+    </script>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+                <p>Curating exceptional coffee experiences in a warm, modern environment.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Visit Us</h4>
+                <ul>
+                    <li><a href="contact.html">Contact & Reserve</a></li>
+                    <li>123 Artisan Avenue, Metro City</li>
+                    <li>Mon - Fri: 7:00 AM - 8:00 PM</li>
+                    <li>Sat - Sun: 8:00 AM - 9:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="ph ph-paper-plane-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Velvet Roast. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

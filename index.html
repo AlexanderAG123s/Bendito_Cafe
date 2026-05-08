@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Roast | Home</title>
+    <meta name="description" content="A modern, minimalist, and cozy artisan coffee shop.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu"><i class="ph ph-list"></i></button>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="menu.html" class="nav-link">Our Menu</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Reserve</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal-up">
+                <span class="hero-subtitle">Premium Artisan Coffee</span>
+                <h1 class="hero-title">Fresh Coffee,<br>Fresh Moments.</h1>
+                <p class="hero-text">Experience the perfect blend of rich flavors and a cozy, modern atmosphere. Your daily escape awaits in the heart of the city.</p>
+                <div class="hero-actions">
+                    <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+                    <a href="contact.html" class="btn btn-secondary">Reserve a Table</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#preview" aria-label="Scroll down"><i class="ph ph-caret-down"></i></a>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="about section-padding" id="preview">
+            <div class="container about-grid">
+                <div class="about-images reveal-left">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Cafe Interior" class="img-main">
+                    <div class="experience-badge">
+                        <span class="years">10+</span>
+                        <span class="text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title">A passion for the perfect brew</h2>
+                    <p class="section-desc">At Velvet Roast, we believe that coffee is more than just a drink—it's an experience. We source the finest organic beans from around the world and roast them locally to bring out their unique, rich flavors.</p>
+                    <p class="section-desc">Every cup tells a story of dedication, from the high-altitude farms where our beans are grown to the careful extraction by our master baristas.</p>
+                    <a href="about.html" class="btn btn-outline mt-4">Discover Our Full Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Menu Preview -->
+        <section class="menu section-padding" style="background-color: var(--color-cream);">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag">House Favorites</span>
+                    <h2 class="section-title">Signature Drinks</h2>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-card reveal-up">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=600" alt="Espresso">
+                            <span class="price">$3.50</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Classic Espresso</h3>
+                            <p>Rich, full-bodied espresso with a perfect crema. A true Italian classic.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal-up" style="transition-delay: 0.1s">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=600" alt="Latte">
+                            <span class="price">$5.00</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Artisan Latte</h3>
+                            <p>Smooth espresso combined with silky steamed milk and subtle latte art.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal-up" style="transition-delay: 0.2s">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=600" alt="Cold Brew">
+                            <span class="price">$4.50</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Nitro Cold Brew</h3>
+                            <p>Steeped for 24 hours, infused with nitrogen for a velvety texture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center reveal-up" style="margin-top: 3rem;">
+                    <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="features section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag">The Velvet Experience</span>
+                    <h2 class="section-title">Why Choose Us</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal-up">
+                        <div class="feature-icon"><i class="ph ph-plant"></i></div>
+                        <h3>Premium Beans</h3>
+                        <p>100% organic, ethically sourced arabica beans roasted to absolute perfection in-house.</p>
+                    </div>
+                    <div class="feature-card reveal-up" style="transition-delay: 0.1s">
+                        <div class="feature-icon"><i class="ph ph-armchair"></i></div>
+                        <h3>Cozy Space</h3>
+                        <p>Ergonomic seating, ambient music, and warm lighting designed for your comfort and productivity.</p>
+                    </div>
+                    <div class="feature-card reveal-up" style="transition-delay: 0.2s">
+                        <div class="feature-icon"><i class="ph ph-users"></i></div>
+                        <h3>Master Baristas</h3>
+                        <p>Our team consists of passionate, certified coffee experts dedicated to their craft.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section-padding" style="background-color: var(--color-dark-brown); color: var(--color-warm-white);">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag" style="color: var(--color-cream);">Community</span>
+                    <h2 class="section-title" style="color: var(--color-warm-white);">What Our Guests Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal-up" style="background-color: rgba(255,255,255,0.05);">
+                        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="review" style="color: var(--color-warm-white);">"The best espresso I've had in the city. The atmosphere is incredible, making it my favorite spot to work in the mornings."</p>
+                        <div class="user-info">
+                            <div class="avatar" style="background: var(--color-caramel);">SJ</div>
+                            <div>
+                                <h4 style="color: var(--color-warm-white);">Sarah Jenkins</h4>
+                                <span style="color: var(--color-cream);">Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal-up" style="background-color: rgba(255,255,255,0.05); transition-delay: 0.1s">
+                        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="review" style="color: var(--color-warm-white);">"Velvet Roast isn't just a coffee shop; it's an experience. Their caramel latte is life-changing. Highly recommend to everyone."</p>
+                        <div class="user-info">
+                            <div class="avatar" style="background: var(--color-caramel);">MD</div>
+                            <div>
+                                <h4 style="color: var(--color-warm-white);">Mark Donovan</h4>
+                                <span style="color: var(--color-cream);">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+                <p>Curating exceptional coffee experiences in a warm, modern environment.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Visit Us</h4>
+                <ul>
+                    <li><a href="contact.html">Contact & Reserve</a></li>
+                    <li>123 Artisan Avenue, Metro City</li>
+                    <li>Mon - Fri: 7:00 AM - 8:00 PM</li>
+                    <li>Sat - Sun: 8:00 AM - 9:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="ph ph-paper-plane-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Velvet Roast. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

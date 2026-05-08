@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Velvet Roast</title>
+    <meta name="description" content="View the beautiful interior and delicious products of Velvet Roast.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu"><i class="ph ph-list"></i></button>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="menu.html" class="nav-link">Our Menu</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="btn btn-outline btn-sm">Reserve</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sub Hero Section -->
+        <section class="sub-hero" style="background-image: url('https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=2000'); background-position: center bottom;">
+            <div class="sub-hero-overlay"></div>
+            <div class="sub-hero-content reveal-up">
+                <h1 class="sub-hero-title">Visuals & Moments</h1>
+                <p class="hero-text">A glimpse into our daily craft.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="section-padding pt-0" style="background: var(--color-warm-white);">
+            <div class="container-fluid">
+                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                    
+                    <div class="gallery-item reveal-up">
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up" style="transition-delay: 0.1s">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up" style="transition-delay: 0.2s">
+                        <img src="https://images.unsplash.com/photo-1495474472201-4bd598b4491b?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up" style="transition-delay: 0.3s">
+                        <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up" style="transition-delay: 0.1s">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up" style="transition-delay: 0.2s">
+                        <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                    <div class="gallery-item reveal-up" style="transition-delay: 0.3s">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="gallery-overlay"><i class="ph ph-instagram-logo"></i></div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 4rem;">
+                    <a href="https://instagram.com" target="_blank" class="btn btn-outline"><i class="ph ph-instagram-logo" style="margin-right: 8px;"></i> Follow @velvetroast</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><i class="ph ph-coffee"></i>Velvet Roast</a>
+                <p>Curating exceptional coffee experiences in a warm, modern environment.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Visit Us</h4>
+                <ul>
+                    <li><a href="contact.html">Contact & Reserve</a></li>
+                    <li>123 Artisan Avenue, Metro City</li>
+                    <li>Mon - Fri: 7:00 AM - 8:00 PM</li>
+                    <li>Sat - Sun: 8:00 AM - 9:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="ph ph-paper-plane-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Velvet Roast. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
