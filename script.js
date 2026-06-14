@@ -1,5 +1,5 @@
 /**
- * Velvet Roast - Main JavaScript
+ * Bendito Cafe - Main JavaScript
  * Handles navigation, animations, and interactions
  */
 
