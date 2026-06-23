@@ -29,6 +29,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero" id="home">
+            <div class="hero-bg"></div>
             <div class="hero-overlay"></div>
             <div class="hero-content reveal-up">
                 <span class="hero-subtitle">Premium Artisan Coffee</span>
@@ -40,7 +41,8 @@
                 </div>
             </div>
             <div class="scroll-indicator">
-                <a href="#preview" aria-label="Scroll down"><i class="ph ph-caret-down"></i></a>
+                <div class="mouse"><div class="wheel"></div></div>
+                <span>Scroll</span>
             </div>
         </section>
 
@@ -48,7 +50,9 @@
         <section class="about section-padding" id="preview">
             <div class="container about-grid">
                 <div class="about-images reveal-left">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Cafe Interior" class="img-main">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Cafe Interior" class="img-main">
+                    </div>
                     <div class="experience-badge">
                         <span class="years">10+</span>
                         <span class="text">Years of<br>Excellence</span>
@@ -136,6 +140,78 @@
             </div>
         </section>
 
+        <!-- Ambiance Parallax -->
+        <section class="parallax-banner">
+            <div class="parallax-content reveal-up">
+                <span class="section-tag" style="color: var(--color-warm-white);">The Atmosphere</span>
+                <h2>Where Time Slows Down</h2>
+                <p class="hero-text" style="color: var(--color-warm-white); max-width: 600px; margin: 0 auto;">Step into a sanctuary of roasted aromas, soft jazz, and deep conversations. A place designed to disconnect you from the rush and reconnect you with what matters.</p>
+            </div>
+        </section>
+
+        <!-- The Process -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <span class="section-tag">Our Philosophy</span>
+                    <h2 class="section-title">The Bean to Cup Journey</h2>
+                </div>
+
+                <div class="process-row">
+                    <div class="process-img reveal-left">
+                        <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&q=80&w=800" alt="Sourcing Beans">
+                    </div>
+                    <div class="process-text reveal-right">
+                        <div class="process-step">01</div>
+                        <h3>Ethical Sourcing</h3>
+                        <p class="section-desc">We travel globally to build direct relationships with small-scale farmers, ensuring they receive fair compensation while we secure the finest, shade-grown Arabica beans.</p>
+                    </div>
+                </div>
+
+                <div class="process-row">
+                    <div class="process-img reveal-right">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800" alt="Roasting Process">
+                    </div>
+                    <div class="process-text reveal-left">
+                        <div class="process-step">02</div>
+                        <h3>Artisan Roasting</h3>
+                        <p class="section-desc">Our master roaster carefully develops the profile of each batch in our vintage drum roaster, coaxing out the subtle notes of caramel, berries, or chocolate hidden within.</p>
+                    </div>
+                </div>
+
+                <div class="process-row">
+                    <div class="process-img reveal-left">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="Brewing Coffee">
+                    </div>
+                    <div class="process-text reveal-right">
+                        <div class="process-step">03</div>
+                        <h3>Precision Brewing</h3>
+                        <p class="section-desc">Through rigorous training and state-of-the-art espresso machines, our baristas extract the perfect shot, crafting a balanced, full-bodied cup every single time.</p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid reveal-up">
+                    <div class="stat-item">
+                        <h3 class="counter">8+</h3>
+                        <p>Single Origins</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter">12k</h3>
+                        <p>Cups Served</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter">100%</h3>
+                        <p>Fair Trade</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter">5</h3>
+                        <p>Master Baristas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials -->
         <section class="testimonials section-padding" style="background-color: var(--color-dark-brown); color: var(--color-warm-white);">
             <div class="container">
@@ -144,25 +220,27 @@
                     <h2 class="section-title" style="color: var(--color-warm-white);">What Our Guests Say</h2>
                 </div>
                 <div class="testimonials-grid">
-                    <div class="testimonial-card reveal-up" style="background-color: rgba(255,255,255,0.05);">
+                    <div class="testimonial-card reveal-up">
+                        <i class="ph-fill ph-quotes testimonial-quote-icon"></i>
                         <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-                        <p class="review" style="color: var(--color-warm-white);">"The best espresso I've had in the city. The atmosphere is incredible, making it my favorite spot to work in the mornings."</p>
+                        <p class="review">"The best espresso I've had in the city. The atmosphere is incredible, making it my favorite spot to work in the mornings."</p>
                         <div class="user-info">
-                            <div class="avatar" style="background: var(--color-caramel);">SJ</div>
+                            <div class="avatar">SJ</div>
                             <div>
-                                <h4 style="color: var(--color-warm-white);">Sarah Jenkins</h4>
-                                <span style="color: var(--color-cream);">Designer</span>
+                                <h4>Sarah Jenkins</h4>
+                                <span>Designer</span>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card reveal-up" style="background-color: rgba(255,255,255,0.05); transition-delay: 0.1s">
+                    <div class="testimonial-card reveal-up" style="transition-delay: 0.1s">
+                        <i class="ph-fill ph-quotes testimonial-quote-icon"></i>
                         <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-                        <p class="review" style="color: var(--color-warm-white);">"Bendito Cafe isn't just a coffee shop; it's an experience. Their caramel latte is life-changing. Highly recommend to everyone."</p>
+                        <p class="review">"Bendito Cafe isn't just a coffee shop; it's an experience. Their caramel latte is life-changing. Highly recommend to everyone."</p>
                         <div class="user-info">
-                            <div class="avatar" style="background: var(--color-caramel);">MD</div>
+                            <div class="avatar">MD</div>
                             <div>
-                                <h4 style="color: var(--color-warm-white);">Mark Donovan</h4>
-                                <span style="color: var(--color-cream);">Local Guide</span>
+                                <h4>Mark Donovan</h4>
+                                <span>Local Guide</span>
                             </div>
                         </div>
                     </div>

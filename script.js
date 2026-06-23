@@ -1,32 +1,30 @@
 /**
- * Bendito Cafe - Main JavaScript
- * Handles navigation, animations, and interactions
+ * Bendito Cafe - Advanced JavaScript
+ * Handles navigation, premium animations, and interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Sticky Navbar Setup ---
+    // --- Sticky Navbar Setup & Glassmorphism ---
     const navbar = document.getElementById('navbar');
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-link');
     
-    // Handle scroll for navbar appearance
     const handleScroll = () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 30) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Init check
     
     // --- Mobile Menu Toggle ---
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        // Toggle icon between list and X
         const icon = mobileMenuBtn.querySelector('i');
         if (navLinks.classList.contains('active')) {
             icon.classList.replace('ph-list', 'ph-x');
@@ -40,37 +38,59 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             navLinks.classList.remove('active');
             const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.replace('ph-x', 'ph-list');
+            if(icon) icon.classList.replace('ph-x', 'ph-list');
         });
     });
 
-    // --- Scroll Animations (Intersection Observer) ---
-    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    // --- Advanced Scroll Animations (Staggered Reveals) ---
+    // We group elements by section to apply staggered delays naturally
+    const sections = document.querySelectorAll('section');
     
     const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px"
     };
     
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Only animate once
+                // Find all reveal elements inside this section
+                const reveals = entry.target.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+                
+                reveals.forEach((el, index) => {
+                    // Add staggered delay if not explicitly set
+                    if (!el.style.transitionDelay && !el.classList.contains('active')) {
+                        el.style.transitionDelay = `${index * 0.15}s`;
+                    }
+                    // Small timeout ensures browser registers the delay before adding active class
+                    setTimeout(() => {
+                        el.classList.add('active');
+                    }, 50);
+                });
+                
+                // Add active to the section itself if it's a reveal element
+                if (entry.target.classList.contains('reveal-up') || entry.target.classList.contains('reveal-left') || entry.target.classList.contains('reveal-right')) {
+                    entry.target.classList.add('active');
+                }
+                
+                observer.unobserve(entry.target);
             }
         });
     }, revealOptions);
     
-    revealElements.forEach(el => {
-        revealObserver.observe(el);
+    sections.forEach(sec => {
+        revealObserver.observe(sec);
     });
+
+    // Also observe standalone reveal elements outside main sections (like footer)
+    const standaloneReveals = document.querySelectorAll('footer .reveal-up');
+    standaloneReveals.forEach(el => revealObserver.observe(el));
 
     // --- Form Handling ---
     const reservationForm = document.getElementById('reservationForm');
     if (reservationForm) {
         reservationForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Basic form submission simulation
             const btn = reservationForm.querySelector('button[type="submit"]');
             const originalText = btn.textContent;
             
@@ -79,20 +99,20 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.style.opacity = '0.8';
             
             setTimeout(() => {
-                btn.textContent = 'Reservation Confirmed!';
+                btn.innerHTML = 'Confirmed <i class="ph ph-check-circle"></i>';
                 btn.style.backgroundColor = '#4CAF50';
                 btn.style.borderColor = '#4CAF50';
+                btn.style.color = 'white';
                 
-                // Reset form
                 reservationForm.reset();
                 
-                // Reset button after 3 seconds
                 setTimeout(() => {
                     btn.textContent = originalText;
                     btn.disabled = false;
                     btn.style.opacity = '1';
                     btn.style.backgroundColor = '';
                     btn.style.borderColor = '';
+                    btn.style.color = '';
                 }, 3000);
             }, 1500);
         });
@@ -118,4 +138,57 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         });
     }
+    
+    // --- Magnetic Button Effect (Optional subtle interaction) ---
+    const primaryBtns = document.querySelectorAll('.btn-primary');
+    primaryBtns.forEach(btn => {
+        btn.addEventListener('mousemove', function(e) {
+            const position = btn.getBoundingClientRect();
+            const x = e.pageX - position.left - position.width / 2;
+            const y = e.pageY - position.top - position.height / 2;
+            
+            // Subtle movement
+            btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+        
+        btn.addEventListener('mouseout', function() {
+            btn.style.transform = 'translate(0px, 0px)';
+        });
+    });
+
+    // --- Number Counter Animation ---
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const text = target.innerText;
+                const isK = text.includes('k');
+                const isPlus = text.includes('+');
+                const isPercent = text.includes('%');
+                
+                const targetNumber = parseInt(text.replace(/[^0-9]/g, ''));
+                let currentNumber = 0;
+                const duration = 2000;
+                const increment = targetNumber / (duration / 16);
+                
+                const updateCounter = () => {
+                    currentNumber += increment;
+                    if (currentNumber < targetNumber) {
+                        target.innerText = Math.ceil(currentNumber) + (isK ? 'k' : '') + (isPlus ? '+' : '') + (isPercent ? '%' : '');
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        target.innerText = text;
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(target);
+            }
+        });
+    }, revealOptions);
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
 });
